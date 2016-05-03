@@ -75,30 +75,3 @@ scutil --set ComputerName "$prefix$serialNumber$suffix"
 echo "Setting computer name as $prefix$serialNumber$suffix"
 echo "Done."
 
-#Calls out the system hardware type
-#hardwareType=`system_profiler SPHardwareDataType | grep "Model Name" | awk '{ print $3, $4, $5 }'`	
-# 
-# Conditional statement that will find the model of the computer and set a prefix 
-# if [[$hardwareType=="MacBook Air"]]; 
-# 	then	
-# 			jamf setComputerName -prefix "MBA-" -useSerialNumber
-# 			echo "Setting computer name as MBA-$serialNumber"
-# 	else 
-# 		if [[$hardwareType=="iMac"]]; 
-# 		then
-# 			jamf setComputerName -prefix "IM-" -useSerialNumber
-# 			echo "Setting computer name as IM-$serialNumber"
-# 		fi
-# 	else
-# 		if [[$hardwareType=="Mac Mini"]]; 
-# 		then
-# 			jamf setComputerName -prefix "MM-" -useSerialNumber
-# 			echo "Setting computer name as IM-$serialNumber"
-# 		fi
-# 	else
-# 		if [[$hardwareType=="MacBook Pro"]]; 
-# 		then
-# 			jamf setComputerName -prefix "MBP-" -useSerialNumber
-# 			echo "Setting computer name as MBP-$serialNumber"
-# 		fi
-# fi
