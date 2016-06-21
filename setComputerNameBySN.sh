@@ -42,7 +42,7 @@ suffix=""
 serialNumber=`system_profiler SPHardwareDataType | grep "Serial Number" | awk '{ print $4 }'`
 
 #Checks to see if prefix and suffix variables are defined
-if [[] "$4" != "" ]] && [[ "$prefix" == "" ]]; then 
+if [[ "$4" != "" ]] && [[ "$prefix" == "" ]]; then 
 	prefix=$4;
 	else echo "No prefix has been defined within the JSS. The hardcoded value will be used."
 fi
